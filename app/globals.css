@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-nunito: "Nunito, sans-serif";
+  --font-nunito: "Nunito", sans-serif;
   --font-barlow: "Barlow", sans-serif;
   --font-open-sans: "Open sans", sans-serif;
 }
