@@ -20,11 +20,11 @@ export default function ImagesCarousel({ item }) {
   return (
     <>
       {isSmallNavOpen ? (
-        <>
+        <div className="custom-display">
           {Object.values(item.images).map((image, index) => (
             <Image key={index} src={image} alt={image} className="z-1" width={500} height={300} />
           ))}
-        </>
+        </div>
       ) : (
         <Carousel
           responsive={responsive}

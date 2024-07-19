@@ -26,9 +26,9 @@ module.exports = {
       },
 
       fontFamily: {
-        nunito: "var(--font-nunito)",
-        barlow: "var(--font-barlow)",
-        openSans: "var(--font-open-sans)",
+        nunito: ["var(--font-nunito)", "sans-serif"],
+        barlow: ["var(--font-barlow)", "sans-serif"],
+        openSans: ["var(--font-open-sans)", "sans-serif"],
       },
     },
   },

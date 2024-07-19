@@ -17,8 +17,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+    console.log(nunito.variable); // Tambahkan log untuk memastikan variabel CSS
+
   return (
-    <html lang="en" className={`${nunito.variable} ${barlow.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${nunito.className} ${barlow.variable} ${openSans.variable}`}>
       <body>
         <SmallNavProvider>
           <header>

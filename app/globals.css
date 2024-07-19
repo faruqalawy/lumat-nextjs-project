@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --font-nunito: "Nunito", sans-serif;
   --font-barlow: "Barlow", sans-serif;
   --font-open-sans: "Open sans", sans-serif;
@@ -11,7 +11,7 @@
 * {
   scroll-behavior: smooth;
   font-family: var(--font-nunito);
-}
+} */
 
 /* Custom display used to accomodate fixed max-width (7xl) for content on each page, so this allow background color/image to fill the entire screen */
 .custom-display {
