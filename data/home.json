@@ -57,7 +57,7 @@
         "videos": [
             {
                 "name": "Lumat X Bean",
-                "videoUrl": "videos/portfolio-1.mp4"
+                "videoUrl": "https://res.cloudinary.com/dnwvsqlh1/video/upload/f_auto:video,q_auto/v1/videos/portfolio-1"
             }
         ]
     }

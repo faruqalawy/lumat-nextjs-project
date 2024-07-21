@@ -28,7 +28,8 @@ export default function TestimonialDescription() {
               key={index}
               id={index}
               name={testimonial.name}
-              imageUrl={testimonial.imageUrl}
+              imageUrlSmall={testimonial.imageUrlSmall}
+              imageUrlLarge={testimonial.imageUrlLarge}
               testimonial={testimonial.testimonial}
             />
           ))}
@@ -45,7 +46,8 @@ export default function TestimonialDescription() {
               key={index}
               id={index}
               name={testimonial.name}
-              imageUrl={testimonial.imageUrl}
+              imageUrlSmall={testimonial.imageUrlSmall}
+              imageUrlLarge={ testimonial.imageUrlLarge}
               testimonial={testimonial.testimonial}
             />
           ))}

@@ -2,7 +2,7 @@
 
 import { CldImage } from "next-cloudinary";
 
-export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
+export default function TestimonialItem({ imageUrlSmall, imageUrlLarge, name, id, testimonial }) {
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <CldImage
@@ -21,7 +21,7 @@ export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
       {/*code below is for Image in small and medium display*/}
       <div className="text-center flex flex-col items-center lg:hidden">
         <CldImage
-          src={imageUrl}
+          src={imageUrlSmall}
           alt="testimonial"
           className="rounded-full max-w-[70vw] md:max-w-[60vw]  border-[10px] border-white"
           priority
@@ -39,7 +39,7 @@ export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
         <div className="col-auto" style={{ marginRight: 30 }}>
           <div className="" style={{ margin: `30px 0 0 30px` }}>
             <CldImage
-              src={imageUrl}
+              src={imageUrlLarge}
               alt={`Testimonial ${id}`}
               style={{ zIndex: 1 }}
               priority
