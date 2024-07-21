@@ -1,19 +1,13 @@
-import Image from "next/image";
+'use client';
 
-import testiImage1 from "@/public/images/testi-1.webp";
-import testiImage2 from "@/public/images/testi-2.webp";
-import testiImage3 from "@/public/images/testi-woman.webp";
-
-import star from "@/public/icons/star-yellow.svg";
+import { CldImage } from "next-cloudinary";
 
 export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
-  const testiImage = [testiImage1, testiImage2, testiImage3];
-
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, i) => (
-      <Image
+      <CldImage
         key={i}
-        src={star}
+        src="icons/star"
         alt="star"
         width={32}
         height={32}
@@ -26,7 +20,7 @@ export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
     <div key={id} className="lg:flex">
       {/*code below is for Image in small and medium display*/}
       <div className="text-center flex flex-col items-center lg:hidden">
-        <Image
+        <CldImage
           src={imageUrl}
           alt="testimonial"
           className="rounded-full max-w-[70vw] md:max-w-[60vw]  border-[10px] border-white"
@@ -44,8 +38,8 @@ export default function TestimonialItem({ imageUrl, name, id, testimonial }) {
       <div className=" hidden lg:flex">
         <div className="col-auto" style={{ marginRight: 30 }}>
           <div className="" style={{ margin: `30px 0 0 30px` }}>
-            <Image
-              src={testiImage[id]}
+            <CldImage
+              src={imageUrl}
               alt={`Testimonial ${id}`}
               style={{ zIndex: 1 }}
               priority

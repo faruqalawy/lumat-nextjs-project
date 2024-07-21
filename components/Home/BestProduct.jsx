@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 import dataHome from "@/data/home.json";
 import Button from "../Other/Button";
@@ -48,7 +49,7 @@ export default function BestProduct() {
         {dataHome.bestProduct.map((item, index) => (
           <div key={index}>
             <div className="group overflow-hidden cursor-pointer relative">
-              <Image
+              <CldImage
                 src={item.imageUrl}
                 className="relative object-cover"
                 alt={item.name}

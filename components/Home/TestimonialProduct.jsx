@@ -1,4 +1,6 @@
-import Image from "next/image";
+'use client';
+
+import { CldImage } from "next-cloudinary";
 
 import Button from "../Other/Button";
 
@@ -10,14 +12,14 @@ import quoteRight from "@/public/icons/quote-right.svg";
 const Testimonial = ({ imageUrl, name, status, testimonial }) => {
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, i) => (
-      <Image key={i} src={star} alt="star" width={32} height={32} className="w-8 sm:w-10 xl:w-12" />
+      <CldImage key={i} src="icons/star" alt="star" width={32} height={32} className="w-8 sm:w-10 xl:w-12" />
     ));
   };
 
   const content = (
     <div className="custom-display flex flex-col justify-center items-center lg:grid lg:grid-cols-2 py-8 md:py-14  ">
       <div className="text-center flex flex-col items-center">
-      <Image
+      <CldImage
           src={imageUrl}
           alt="testimonial"
           className="rounded-full max-w-[70vw] md:max-w-[60vw] border-[10px] border-white lg:max-w-[35vw]"
@@ -33,8 +35,8 @@ const Testimonial = ({ imageUrl, name, status, testimonial }) => {
       </div>
 
       <div>
-      <Image
-          src={quoteLeft}
+      <CldImage
+          src="icons/quote-left"
           alt="quote-left"
           className="opacity-20 w-10 pb-1 md:w-12 lg:w-16"
           width={40}
@@ -43,8 +45,8 @@ const Testimonial = ({ imageUrl, name, status, testimonial }) => {
         <h1 className="font-openSans lg:text-lg font-light sm:max-w-[70vw]">
           {testimonial}
         </h1>
-        <Image
-          src={quoteRight}
+        <CldImage
+          src="icons/quote-right"
           alt="quote-right"
           className="opacity-20 w-10 ml-auto pb-1 md:w-12 lg:w-16"
           width={40}

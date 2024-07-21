@@ -1,8 +1,6 @@
-import Image from "next/image";
+"use client";
 
-import PhoneImage from "@/public/icons/ic_phone.svg";
-import EmailImage from "@/public/icons/ic_mail.svg";
-import InstagramImage from "@/public/icons/ic_instagram-2.svg";
+import { CldImage } from "next-cloudinary";
 
 export default function ContactList() {
   return (
@@ -18,9 +16,11 @@ export default function ContactList() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={PhoneImage}
+            <CldImage
+              src="icons/ic_phone"
               alt="phone icon"
+              width={60}
+              height={60}
               className="md:w-20 lg:w-24"
             />
           </a>
@@ -33,9 +33,11 @@ export default function ContactList() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={EmailImage}
-              alt="phone icon"
+            <CldImage
+              src="icons/ic_mail"
+              alt="email icon"
+              width={60}
+              height={60}
               className="md:w-20 lg:w-24"
             />
           </a>
@@ -51,9 +53,11 @@ export default function ContactList() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={InstagramImage}
+            <CldImage
+              src="icons/ic_instagram-2"
               alt="phone icon"
+              width={60}
+              height={60}
               className="md:w-20 lg:w-24"
             />
           </a>

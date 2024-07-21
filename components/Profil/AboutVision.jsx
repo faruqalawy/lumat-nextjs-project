@@ -1,8 +1,8 @@
-import Image from "next/image";
+"use client";
+
+import { CldImage } from "next-cloudinary";
 
 import dataProfil from "@/data/profil.json";
-
-import crewImage from "@/public/images/1.webp";
 
 export default function AboutVision() {
   // Defining the content to be reused in two different places
@@ -39,7 +39,7 @@ export default function AboutVision() {
     <>
       {/* Displaying content with an image for smaller screens (lg:hidden) */}
       <div className="mt-12 md:mt-20 lg:hidden">
-        <Image src={crewImage} alt="lumat-team" width={1000} height={800} />
+        <CldImage src="images/1" alt="lumat-team" width={1000} height={800} />\
         {content}
       </div>
 

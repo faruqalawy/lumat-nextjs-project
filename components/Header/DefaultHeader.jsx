@@ -4,9 +4,8 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import NavBar from "./NavBar";
-import backgroundImage from "@/public/images/header-background.webp";
 
 export default function DefaultHeader() {
   const pathname = usePathname();
@@ -26,8 +25,8 @@ export default function DefaultHeader() {
 
   return (
     <div className="relative max-w-full">
-      <Image
-        src={backgroundImage}
+      <CldImage
+        src="https://res.cloudinary.com/dnwvsqlh1/image/upload/f_auto,q_auto/v1/images/header-background"
         alt="Background"
         priority
         fill

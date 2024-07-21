@@ -1,16 +1,16 @@
+'use client';
+
 // This header component is used exclusively in the home page
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 import NavBar from "./NavBar";
 import Button from "../Other/Button";
 
-import backgroundImage from "@/public/images/home-header-background.webp";
-
 export default function HomeHeader() {
   return (
     <div className="relative max-w-full font-nunito">
-      <Image
-        src={backgroundImage}
+      <CldImage
+        src="images/home-header-background"
         alt="background for home header"
         priority
         fill

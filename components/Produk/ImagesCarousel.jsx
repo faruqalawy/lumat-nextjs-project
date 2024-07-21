@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useContext } from "react";
 
 import { SmallNavContext } from "@/context/SmallNavContext";
@@ -22,7 +22,7 @@ export default function ImagesCarousel({ item }) {
       {isSmallNavOpen ? (
         <div className="custom-display">
           {Object.values(item.images).map((image, index) => (
-            <Image key={index} src={image} alt={image} className="z-1" width={500} height={300} />
+            <CldImage key={index} src={image} alt={image} className="z-1" width={500} height={300} />
           ))}
         </div>
       ) : (
@@ -34,7 +34,7 @@ export default function ImagesCarousel({ item }) {
           itemClass="static-carousel"
         >
           {Object.values(item.images).map((image, index) => (
-            <Image
+            <CldImage
               key={index}
               src={image}
               alt={image}

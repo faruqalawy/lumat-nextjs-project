@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useContext } from "react";
 
-import Icon from "@/public/icons/ic_whatsapp.svg";
 import { SmallNavContext } from "@/context/SmallNavContext";
 
 export default function WhatsappButton() {
@@ -21,7 +20,13 @@ export default function WhatsappButton() {
       >
         {" "}
         {/* Apply conditional class based on isOpen */}
-        <Image src={Icon} alt="WaIcon" className="w-5" />
+        <CldImage
+          src="icons/ic_whatsapp"
+          alt="WaIcon"
+          className="w-5"
+          width={20}
+          height={21}
+        />
         <h1 className="text-white">PESAN SEKARANG</h1>
       </button>
     </a>

@@ -1,13 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
-import Logo from "@/public/icons/logo-lumat.svg";
-import Instagram from "@/public/icons/ic_instagram.svg";
-import Tiktok from "@/public/icons/ic_tiktok.svg";
-import Shopee from "@/public/icons/ic_shopee.svg";
-import Tokopedia from "@/public/icons/ic_tokopedia.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -33,13 +29,25 @@ export default function MainFooter() {
         className="flex flex-col items-center pt-4 w-fit mx-auto cursor-pointer"
         onClick={scrollToTop}
       >
-        <FontAwesomeIcon icon={faChevronUp} style={{ width: '30px', height: '30px' }}/>
+        <FontAwesomeIcon
+          icon={faChevronUp}
+          style={{ width: "30px", height: "30px" }}
+        />
         <p>Back to Top</p>
       </button>
 
       <div className=" grid grid-rows-6 grid-cols-6 gap-1 md:gap-2 lg:gap-3 py-5 text-base custom-display">
         <div className="col-span-6 row-span-2 md:row-span-3 lg:row-span-6 lg:col-span-2 mx-auto md:mb-8">
-          <Image src={Logo} alt="brand-logo" className="md:w-[350px]" />
+          <Link href="/">
+            <CldImage
+              src="icons/logo-lumat"
+              alt="brand-logo"
+              width={200} // Ganti dengan lebar yang sesuai
+              height={106} // Ganti dengan tinggi yang sesuai, atau hitung sesuai proporsinya
+              className="md:w-[350px]"
+              quality={100}
+            />
+          </Link>
           <h1 className="mt-1 text-base md:text-[26px]">
             Lumbung Makanan Nikmat
           </h1>
@@ -90,14 +98,24 @@ export default function MainFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={Instagram} alt="instagram" />
+                <CldImage
+                  width={40}
+                  height={40}
+                  src="icons/ic_instagram"
+                  alt="instagram"
+                />
               </a>
               <a
                 href="https://www.tiktok.com/@lumatofficial"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={Tiktok} alt="tiktok" />
+                <CldImage
+                  width={40}
+                  height={40}
+                  src="icons/ic_tiktok"
+                  alt="tiktok"
+                />
               </a>
             </div>
           </div>
@@ -111,14 +129,24 @@ export default function MainFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={Shopee} alt="shopee" />
+                <CldImage
+                  width={40}
+                  height={40}
+                  src="icons/ic_shopee"
+                  alt="shopee"
+                />
               </a>
               <a
                 href="https://tokopedia.link/lumatofficial"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={Tokopedia} alt="tokopedia" />
+                <CldImage
+                  width={40}
+                  height={40}
+                  src="https://res.cloudinary.com/dnwvsqlh1/image/upload/f_auto,q_auto/v1/icons/ic_tokopedia"
+                  alt="tokopedia"
+                />
               </a>
             </div>
           </div>

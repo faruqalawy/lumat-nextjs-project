@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useContext, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,8 +8,6 @@ import { usePathname } from "next/navigation";
 import { SmallNavContext } from "@/context/SmallNavContext";
 
 import { Fade } from "react-awesome-reveal";
-
-import logo from "@/public/icons/logo-lumat.svg";
 
 const isPageActive = (currentPage, targetPage) => {
   return currentPage === targetPage ? "text-yellow" : "";
@@ -95,7 +93,13 @@ export default function NavBar() {
   return (
     <div className="flex justify-between items-center pt-4 md:pt-8 lg:pt-14 pb-9 lg:pb-20">
       <Link href="/">
-        <Image src={logo} alt="brand logo" className="w-32 md:w-48" />
+        <CldImage
+          src="icons/logo-lumat"
+          alt="brand logo"
+          width={128}
+          height={67} 
+          className="md:w-[191px]"
+        />
       </Link>
 
       <div>{isSmallNavOpen && smallNav}</div>

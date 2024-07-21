@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 import dataHome from "@/data/home.json";
 import TestimonialProduct from "./TestimonialProduct";
 

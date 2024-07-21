@@ -1,7 +1,7 @@
-import Image from 'next/image';
+'use client';
+
+import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
-import Arrow from '@/public/icons/arrow.svg';
-import ArrowOrange from '@/public/icons/arrow-orange.svg';
 import { twMerge } from 'tailwind-merge';
 
 function Button(props) {
@@ -22,10 +22,12 @@ function Button(props) {
           >
             {props.text}
           </h2>
-           <Image
-            src={isWhite ? ArrowOrange : Arrow}
-            className="w-4 md:w-5 lg:w-6 mr-1.5 sm:mr-2.5 lg:mr-6 ml-1 md:ml-1.5 lg:ml-2.5"
+           <CldImage
+            src={isWhite ? "icons/arrow-orange" : "icons/arrow"}
+            className="md:w-5 lg:w-6 mr-1.5 sm:mr-2.5 lg:mr-6 ml-1 md:ml-1.5 lg:ml-2.5"
             alt="arrow"
+            width={16}
+            height={16}
           />
         </button>
     </Link>
