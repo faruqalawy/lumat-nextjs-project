@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/kontak/page": "app/kontak/page.js",
-  "/icon.png/route": "app/icon.png/route.js",
-  "/page": "app/page.js",
-  "/produk/page": "app/produk/page.js",
-  "/profil/page": "app/profil/page.js",
-  "/testimoni/page": "app/testimoni/page.js"
-}
