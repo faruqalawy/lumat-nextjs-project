@@ -26,6 +26,7 @@ export default function WhatsappButton() {
           className="w-5"
           width={20}
           height={21}
+          format="svg"
         />
         <h1 className="text-white">PESAN SEKARANG</h1>
       </button>

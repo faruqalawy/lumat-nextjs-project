@@ -17,6 +17,7 @@ export default function ContactList() {
             rel="noopener noreferrer"
           >
             <CldImage
+              format="svg"
               src="icons/ic_phone"
               alt="phone icon"
               width={60}
@@ -34,6 +35,7 @@ export default function ContactList() {
             rel="noopener noreferrer"
           >
             <CldImage
+              format="svg"
               src="icons/ic_mail"
               alt="email icon"
               width={60}
@@ -54,6 +56,7 @@ export default function ContactList() {
             rel="noopener noreferrer"
           >
             <CldImage
+              format="svg"
               src="icons/ic_instagram-2"
               alt="phone icon"
               width={60}

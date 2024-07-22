@@ -28,6 +28,7 @@ function Button(props) {
             alt="arrow"
             width={16}
             height={16}
+            format="svg"
           />
         </button>
     </Link>

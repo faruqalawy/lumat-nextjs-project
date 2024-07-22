@@ -45,7 +45,7 @@ export default function MainFooter() {
               width={200} // Ganti dengan lebar yang sesuai
               height={106} // Ganti dengan tinggi yang sesuai, atau hitung sesuai proporsinya
               className="md:w-[350px]"
-              quality={100}
+              format="svg"
             />
           </Link>
           <h1 className="mt-1 text-base md:text-[26px]">
@@ -99,6 +99,7 @@ export default function MainFooter() {
                 rel="noopener noreferrer"
               >
                 <CldImage
+                  format="svg"
                   width={40}
                   height={40}
                   src="icons/ic_instagram"
@@ -111,6 +112,7 @@ export default function MainFooter() {
                 rel="noopener noreferrer"
               >
                 <CldImage
+                  format="svg"
                   width={40}
                   height={40}
                   src="icons/ic_tiktok"
@@ -130,6 +132,7 @@ export default function MainFooter() {
                 rel="noopener noreferrer"
               >
                 <CldImage
+                  format="svg"
                   width={40}
                   height={40}
                   src="icons/ic_shopee"
@@ -142,6 +145,7 @@ export default function MainFooter() {
                 rel="noopener noreferrer"
               >
                 <CldImage
+                  format="svg"
                   width={40}
                   height={40}
                   src="https://res.cloudinary.com/dnwvsqlh1/image/upload/f_auto,q_auto/v1/icons/ic_tokopedia"

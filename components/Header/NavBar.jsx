@@ -99,6 +99,7 @@ export default function NavBar() {
           width={128}
           height={67} 
           className="md:w-[191px]"
+          format="svg"
         />
       </Link>
 

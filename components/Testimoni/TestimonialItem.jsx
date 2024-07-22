@@ -7,11 +7,12 @@ export default function TestimonialItem({ imageUrlSmall, imageUrlLarge, name, id
     return Array.from({ length: 5 }, (_, i) => (
       <CldImage
         key={i}
-        src="icons/star"
+        src="icons/star-yellow"
         alt="star"
         width={32}
         height={32}
         className="w-8 sm:w-10 xl:w-12"
+        format="svg"
       />
     ));
   };

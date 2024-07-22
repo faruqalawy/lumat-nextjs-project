@@ -14,6 +14,7 @@ const Testimonial = ({ imageUrl, name, status, testimonial }) => {
         width={32}
         height={32}
         className="w-8 sm:w-10 xl:w-12"
+        format="svg"
       />
     ));
   };
@@ -41,6 +42,7 @@ const Testimonial = ({ imageUrl, name, status, testimonial }) => {
           className="opacity-20 w-10 pb-1 md:w-12 lg:w-16"
           width={40}
           height={40}
+          format="svg"
         />
         <h1 className="font-openSans lg:text-lg font-light sm:max-w-[70vw]">
           {testimonial}
@@ -51,6 +53,7 @@ const Testimonial = ({ imageUrl, name, status, testimonial }) => {
           className="opacity-20 w-10 ml-auto pb-1 md:w-12 lg:w-16"
           width={40}
           height={40}
+          format="svg"
         />
         <div className="flex justify-center">{renderStars()}</div>
       </div>
